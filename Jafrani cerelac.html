@@ -600,6 +600,49 @@
         .footer-social-links a:hover {
             color: var(--primary-color);
         }
+        
+        /* --- নতুন: লোডিং স্পিনার স্টাইল --- */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9); /* হালকা সাদা ব্যাকগ্রাউন্ড */
+            display: none; /* শুরুতে লুকানো থাকবে */
+            justify-content: center;
+            align-items: center;
+            z-index: 2500; /* নিশ্চিত করতে হবে যে এটি সবকিছুর উপরে থাকে */
+            flex-direction: column;
+            gap: 15px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .loading-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .spinner {
+            border: 8px solid #f3f3f3; /* হালকা গ্রে */
+            border-top: 8px solid var(--primary-color); /* স্পিনারের রং */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
 
         /* --- ৯. মিডিয়া কোয়েরি (ডেস্কটপ) --- */
         @media (min-width: 768px) {
@@ -627,6 +670,11 @@
     </style>
 </head>
 <body>
+    
+    <div id="loading-spinner-overlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p class="loading-text">অনুগ্রহ করে অপেক্ষা করুন, আপনার অর্ডারটি প্রক্রিয়াধীন...</p>
+    </div>
 
     <div id="popup-order-now" class="popup-notification">
         
@@ -807,10 +855,17 @@
             const confirmationPopupOverlay = document.getElementById('confirmation-popup');
             const closePopupBtn = document.querySelector('.confirmation-popup-content .close-btn');
             const popupNotification = document.getElementById('popup-order-now');
+            
+            // নতুন স্পিনার এলিমেন্ট
+            const loadingSpinnerOverlay = document.getElementById('loading-spinner-overlay'); 
 
             // ফাংশন: ফর্ম সফলভাবে সাবমিট হলে পপ-আপ দেখাবে (iframe-এর onload ইভেন্ট থেকে কল হবে)
             window.formSubmissionSuccess = function() {
                 if (window.submitted) {
+                    
+                    // স্পিনার লুকিয়ে ফেলা
+                    loadingSpinnerOverlay.classList.remove('show'); 
+                    
                     // ফর্ম রিসেট
                     orderForm.reset(); 
                     
@@ -822,17 +877,22 @@
 
             // ১. অর্ডার ফর্ম সাবমিট হ্যান্ডলিং
             orderForm.addEventListener('submit', function(e) {
-                // e.preventDefault() এখানে বাদ দেওয়া হয়েছে
                 
                 // গ্লোবাল ফ্ল্যাগ সেট করা হচ্ছে (iframe-এর জন্য)
                 window.submitted = true; 
                 
+                // ⭐ ফর্ম সাবমিট হলে স্পিনার দেখানো ⭐
+                loadingSpinnerOverlay.classList.add('show'); 
+
                 console.log('Order submitting to Google Form...'); 
+                // মনে রাখবেন, এখানে e.preventDefault() বাদ দেওয়া হয়েছে যাতে ফর্মটি Google Forms এ জমা হয়।
             });
 
             // ২. পপ-আপ বন্ধ করার ইভেন্ট
             function hidePopup() {
                 confirmationPopupOverlay.classList.remove('show');
+                // নিশ্চিত করুন যে পপ-আপ বন্ধের সময় স্পিনার লুকানো আছে
+                loadingSpinnerOverlay.classList.remove('show'); 
             }
             
             closePopupBtn.addEventListener('click', hidePopup);
