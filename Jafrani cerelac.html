@@ -558,6 +558,49 @@
           100% { transform: scale(0.95); opacity: 0.7; }
         }
 
+        /* --- নতুন: লোডিং স্পিনার স্টাইল (পরিবর্তিত) --- */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9); /* হালকা সাদা ব্যাকগ্রাউন্ড */
+            display: none; /* শুরুতে লুকানো থাকবে */
+            justify-content: center;
+            align-items: center; /* ⭐ এটি vertically center করবে ⭐ */
+            z-index: 2500; /* নিশ্চিত করতে হবে যে এটি সবকিছুর উপরে থাকে */
+            flex-direction: column;
+            gap: 15px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .loading-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .spinner {
+            border: 8px solid #f3f3f3; /* হালকা গ্রে */
+            border-top: 8px solid var(--primary-color); /* স্পিনারের রং */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
         /* --- ৮. ফুটার --- */
         footer {
             background-color: #263238;
@@ -601,49 +644,6 @@
             color: var(--primary-color);
         }
         
-        /* --- নতুন: লোডিং স্পিনার স্টাইল --- */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.9); /* হালকা সাদা ব্যাকগ্রাউন্ড */
-            display: none; /* শুরুতে লুকানো থাকবে */
-            justify-content: center;
-            align-items: center;
-            z-index: 2500; /* নিশ্চিত করতে হবে যে এটি সবকিছুর উপরে থাকে */
-            flex-direction: column;
-            gap: 15px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .loading-overlay.show {
-            display: flex;
-            opacity: 1;
-        }
-
-        .spinner {
-            border: 8px solid #f3f3f3; /* হালকা গ্রে */
-            border-top: 8px solid var(--primary-color); /* স্পিনারের রং */
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .loading-text {
-            font-size: 1.2rem;
-            color: var(--secondary-color);
-            font-weight: 700;
-        }
-
         /* --- ৯. মিডিয়া কোয়েরি (ডেস্কটপ) --- */
         @media (min-width: 768px) {
             .hero-grid {
@@ -694,7 +694,9 @@
             <span class="close-btn">&times;</span>
             <i class="fas fa-check-circle success-icon"></i> <h3>🎉 আপনার অর্ডার সফলভাবে গ্রহণ করা হয়েছে!</h3>
             <p>আমাদের প্রতিনিধি দ্রুত আপনার সাথে **০১৩ ০৭৭৭ ৯৯৮২** এই নম্বর থেকে যোগাযোগ করবে। আপনাকে ধন্যবাদ!</p>
-            <a href="/" class="continue-shopping-btn">হোম পেজে ফিরে যান</a> </div>
+            <a href="#hero" class="continue-shopping-btn">হোম সেকশনে ফিরে যান</a> 
+            
+        </div>
     </div>
 
     <header id="main-header">
