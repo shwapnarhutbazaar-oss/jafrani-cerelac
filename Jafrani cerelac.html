@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>প্রিমিয়াম জাফরানি হোমমেইড সেরেলাক | স্বপ্নের হাট বাজার</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700;900&family=Poppins:wght+400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     
     <style>
@@ -857,9 +857,17 @@
             const confirmationPopupOverlay = document.getElementById('confirmation-popup');
             const closePopupBtn = document.querySelector('.confirmation-popup-content .close-btn');
             const popupNotification = document.getElementById('popup-order-now');
+            const continueShoppingBtn = document.querySelector('.continue-shopping-btn'); // ⭐ নতুন: এই বাটনটি ধরা হলো ⭐
             
             // নতুন স্পিনার এলিমেন্ট
             const loadingSpinnerOverlay = document.getElementById('loading-spinner-overlay'); 
+
+            // ফাংশন: পপ-আপ লুকানোর জন্য
+            function hidePopup() {
+                confirmationPopupOverlay.classList.remove('show');
+                // নিশ্চিত করুন যে পপ-আপ বন্ধের সময় স্পিনার লুকানো আছে
+                loadingSpinnerOverlay.classList.remove('show'); 
+            }
 
             // ফাংশন: ফর্ম সফলভাবে সাবমিট হলে পপ-আপ দেখাবে (iframe-এর onload ইভেন্ট থেকে কল হবে)
             window.formSubmissionSuccess = function() {
@@ -891,13 +899,14 @@
             });
 
             // ২. পপ-আপ বন্ধ করার ইভেন্ট
-            function hidePopup() {
-                confirmationPopupOverlay.classList.remove('show');
-                // নিশ্চিত করুন যে পপ-আপ বন্ধের সময় স্পিনার লুকানো আছে
-                loadingSpinnerOverlay.classList.remove('show'); 
-            }
             
             closePopupBtn.addEventListener('click', hidePopup);
+
+            // ⭐ মূল পরিবর্তন: 'হোম সেকশনে ফিরে যান' বাটনে ক্লিক করলে পপ-আপ বন্ধ হবে ⭐
+            continueShoppingBtn.addEventListener('click', function(e) {
+                 hidePopup(); // পপ-আপ লুকানোর ফাংশন কল করা হলো
+                 // এটি একটি অ্যাঙ্কর ট্যাগ হওয়ায় `#hero` তে স্ক্রলও করবে।
+            });
 
             // পপ-আপের বাইরে ক্লিক করলে বন্ধ হবে
             confirmationPopupOverlay.addEventListener('click', function(e) {
