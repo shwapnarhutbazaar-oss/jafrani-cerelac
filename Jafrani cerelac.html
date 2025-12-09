@@ -73,6 +73,7 @@
             padding: 10px 5%;
         }
 
+        /* লোগো স্টাইল এখন <a> ট্যাগে সরাসরি প্রয়োগ হবে */
         .logo {
             font-size: 1.6rem;
             color: var(--primary-color);
@@ -81,6 +82,11 @@
             border: 2px solid var(--primary-color);
             border-radius: 30px; /* লম্বাটে গোল ফ্রেম */
         }
+        /* লোগো লিংক যাতে কোনো আন্ডারলাইন না দেখায় */
+        .logo:hover {
+            color: #E64A19;
+        }
+
 
         .nav-links {
             list-style: none;
@@ -113,19 +119,16 @@
             text-align: center;
         }
 
-        /* 🔥 নতুন শিরোনাম ডিজাইন 🔥 */
+        /* ⭐ সংশোধিত শিরোনাম ডিজাইন: সলিড জাফরানি কালার ⭐ */
         .hero-text h2 {
-            font-size: 2.5rem; /* ফন্ট সাইজ সামান্য বড় করা হলো */
-            font-weight: 800; /* আরও বোল্ড */
-            letter-spacing: 1px; /* অক্ষরগুলির মাঝে দূরত্ব বাড়ানো হলো */
+            font-size: 2.5rem; 
+            font-weight: 800;
+            letter-spacing: 1px;
             
-            /* গ্রেডিয়েন্ট এফেক্ট */
-            background: linear-gradient(90deg, var(--secondary-color) 0%, #00796B 50%, var(--primary-color) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            /* ⭐ পরিবর্তন: সলিড জাফরানি কালার (Primary Color) ব্যবহার ⭐ */
+            color: var(--primary-color); 
             
-            /* টেক্সট শ্যাডো */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+            /* Gradient স্টাইল রিমুভ করা হয়েছে */
             margin-bottom: 5px;
         }
 
@@ -145,6 +148,7 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
+        /* ⭐ CTA বাটনে অ্যাগ্রেসিভ পালস অ্যানিমেশন ⭐ */
         .cta-button {
             display: inline-block;
             background-color: var(--primary-color);
@@ -155,11 +159,30 @@
             font-weight: 700;
             margin-top: 25px;
             transition: transform 0.3s, background-color 0.3s;
+            /* ⭐ পরিবর্তন: নতুন অ্যাগ্রেসিভ অ্যানিমেশন কল ⭐ */
+            animation: aggressive-pulse 0.7s infinite ease-in-out; 
         }
 
         .cta-button:hover {
             background-color: #E64A19;
             transform: scale(1.05);
+            animation: none; /* হোভারে অ্যানিমেশন বন্ধ */
+        }
+        
+        /* নতুন অ্যাগ্রেসিভ অ্যানিমেশনের জন্য Keyframes */
+        @keyframes aggressive-pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7);
+            }
+            30% {
+                transform: scale(1.08); /* দ্রুত একটু বেশি বড় হবে */
+                box-shadow: 0 0 0 10px rgba(255, 87, 34, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7);
+            }
         }
 
         /* --- ৩. মূল্য ও অফার সেকশন (লম্বাটে গোল ফ্রেম) --- */
@@ -199,7 +222,8 @@
         .price-cross {
             font-size: 1.8rem;
             font-weight: 600;
-            text-decoration: line-through;
+            /* নিয়মিত মূল্য ক্রস-আউট করার জন্য */
+            text-decoration: line-through; 
             color: #FFCDD2;
         }
         
@@ -231,15 +255,23 @@
             margin-bottom: 5px;
         }
 
-        /* প্রো লেভেল অ্যানিমেশন: ফ্ল্যাশিং বর্ডার */
+        /* প্রো লেভেল অ্যানিমেশন: ফ্ল্যাশিং বর্ডার (আগেরটা) */
         @keyframes flashBorder {
             0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
             50% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
             100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
         }
+        
+        /* ⭐ অফার অ্যানিমেশন (Scale Pulse) ⭐ */
+        @keyframes offer-pulse {
+            0% { transform: scale(1.1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1.1); }
+        }
 
         .animated-offer {
-            animation: flashBorder 2s infinite ease-out;
+            /* আগেরটা + নতুনটা */
+            animation: flashBorder 2s infinite ease-out, offer-pulse 3s infinite ease-in-out; 
         }
 
         /* --- ৪. প্রোডাক্ট ডিটেইলস ও উপাদান --- */
@@ -435,7 +467,40 @@
             font-size: 1.1rem;
             transition: transform 0.3s, background-color 0.3s;
             line-height: 1; 
+            /* ⭐ পরিবর্তন: ব্যাজ পজিশনিং এর জন্য রিলেটিভ পজিশন ⭐ */
+            position: relative; 
         }
+        
+        /* ⭐ নতুন: WhatsApp নোটিফিকেশন ব্যাজ স্টাইল ⭐ */
+        .whatsapp-btn::after {
+            content: '1';
+            position: absolute;
+            top: -5px; /* Adjust vertical position */
+            right: -5px; /* Adjust horizontal position */
+            background-color: red; /* Red color for notification */
+            color: var(--white);
+            font-family: Arial, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 1; 
+            padding: 4px 6px; 
+            border-radius: 50%; 
+            min-width: 18px; 
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 3px var(--whatsapp-green); /* Ring effect */
+            animation: badge-pulse 1s infinite ease-out; /* Pulsing animation */
+        }
+        
+        /* ⭐ নতুন: ব্যাজ পালসিং অ্যানিমেশন Keyframes ⭐ */
+        @keyframes badge-pulse {
+            0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+            50% { transform: scale(1.1); box-shadow: 0 0 0 5px rgba(255, 0, 0, 0); }
+            100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+        }
+        /* ⭐ WhatsApp ব্যাজ স্টাইল শেষ ⭐ */
 
         .whatsapp-btn {
             background-color: var(--whatsapp-green); 
@@ -706,7 +771,7 @@
 
     <header id="main-header">
         <div class="header-content container">
-            <h1 class="logo">স্বপ্নের হাট বাজার</h1>
+            <a href="#hero" class="logo">স্বপ্নের হাট বাজার</a> 
             <nav>
                 <ul class="nav-links">
                     <li><a href="#hero">হোম</a></li>
@@ -722,7 +787,7 @@
         <section id="hero" class="hero-section">
             <div class="container hero-grid">
                 <div class="hero-text">
-                    <h2>✨ প্রিমিয়াম জাফরানি হোমমেইড সেরেলাক ✨</h2>
+                    <h2>প্রিমিয়াম জাফরানি হোমমেইড সেরেলাক</h2>
                     <p class="tagline">**শিশুর পরিপূর্ণ পুষ্টি ও বৃদ্ধির জন্য ২২টি উপাদানে তৈরি**! সম্পূর্ণ রাসায়নিকমুক্ত ও নিরাপদ।</p>
                     <a href="#order-form" class="cta-button">🛒 বিশেষ অফারটি নিন!</a>
                 </div>
