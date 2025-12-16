@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>প্রিমিয়াম জাফরানি হোমমেইড সেরেলাক | স্বপ্নের হাট বাজার</title>
+    
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1318391136973937');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1318391136973937&ev=PageView&noscript=1"
+    /></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     
@@ -73,20 +89,18 @@
             padding: 10px 5%;
         }
 
-        /* লোগো স্টাইল এখন <a> ট্যাগে সরাসরি প্রয়োগ হবে */
         .logo {
             font-size: 1.6rem;
             color: var(--primary-color);
             font-weight: 700;
             padding: 5px 15px;
             border: 2px solid var(--primary-color);
-            border-radius: 30px; /* লম্বাটে গোল ফ্রেম */
+            border-radius: 30px; 
         }
-        /* লোগো লিংক যাতে কোনো আন্ডারলাইন না দেখায় */
+
         .logo:hover {
             color: #E64A19;
         }
-
 
         .nav-links {
             list-style: none;
@@ -119,16 +133,11 @@
             text-align: center;
         }
 
-        /* ⭐ সংশোধিত শিরোনাম ডিজাইন: সলিড জাফরানি কালার ⭐ */
         .hero-text h2 {
             font-size: 2.5rem; 
             font-weight: 800;
             letter-spacing: 1px;
-            
-            /* ⭐ পরিবর্তন: সলিড জাফরানি কালার (Primary Color) ব্যবহার ⭐ */
             color: var(--primary-color); 
-            
-            /* Gradient স্টাইল রিমুভ করা হয়েছে */
             margin-bottom: 5px;
         }
 
@@ -148,7 +157,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        /* ⭐ CTA বাটনে অ্যাগ্রেসিভ পালস অ্যানিমেশন ⭐ */
         .cta-button {
             display: inline-block;
             background-color: var(--primary-color);
@@ -159,24 +167,22 @@
             font-weight: 700;
             margin-top: 25px;
             transition: transform 0.3s, background-color 0.3s;
-            /* ⭐ পরিবর্তন: নতুন অ্যাগ্রেসিভ অ্যানিমেশন কল ⭐ */
             animation: aggressive-pulse 0.7s infinite ease-in-out; 
         }
 
         .cta-button:hover {
             background-color: #E64A19;
             transform: scale(1.05);
-            animation: none; /* হোভারে অ্যানিমেশন বন্ধ */
+            animation: none;
         }
         
-        /* নতুন অ্যাগ্রেসিভ অ্যানিমেশনের জন্য Keyframes */
         @keyframes aggressive-pulse {
             0% {
                 transform: scale(1);
                 box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7);
             }
             30% {
-                transform: scale(1.08); /* দ্রুত একটু বেশি বড় হবে */
+                transform: scale(1.08);
                 box-shadow: 0 0 0 10px rgba(255, 87, 34, 0);
             }
             100% {
@@ -185,7 +191,7 @@
             }
         }
 
-        /* --- ৩. মূল্য ও অফার সেকশন (লম্বাটে গোল ফ্রেম) --- */
+        /* --- ৩. মূল্য ও অফার সেকশন --- */
         .price-section {
             background-color: var(--secondary-color);
             padding: 30px 0;
@@ -222,18 +228,8 @@
         .price-cross {
             font-size: 1.8rem;
             font-weight: 600;
-            /* নিয়মিত মূল্য ক্রস-আউট করার জন্য */
             text-decoration: line-through; 
             color: #FFCDD2;
-        }
-        
-        .regular-price-box::before {
-            content: '';
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            font-size: 1.2rem;
-            color: #FF5722;
         }
 
         .offer-price-box {
@@ -249,20 +245,12 @@
             line-height: 1.2;
         }
 
-        .price-box .label {
-            font-size: 0.9rem;
-            font-weight: 400;
-            margin-bottom: 5px;
-        }
-
-        /* প্রো লেভেল অ্যানিমেশন: ফ্ল্যাশিং বর্ডার (আগেরটা) */
         @keyframes flashBorder {
             0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
             50% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
             100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
         }
         
-        /* ⭐ অফার অ্যানিমেশন (Scale Pulse) ⭐ */
         @keyframes offer-pulse {
             0% { transform: scale(1.1); }
             50% { transform: scale(1.15); }
@@ -270,7 +258,6 @@
         }
 
         .animated-offer {
-            /* আগেরটা + নতুনটা */
             animation: flashBorder 2s infinite ease-out, offer-pulse 3s infinite ease-in-out; 
         }
 
@@ -311,15 +298,7 @@
             transition: transform 0.3s;
         }
         
-        .detail-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .detail-card h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
+        .detail-card:hover { transform: translateY(-5px); }
 
         .ingredients-list {
             background-color: var(--white);
@@ -344,17 +323,13 @@
 
         .ingredient-category h5 {
             color: var(--secondary-color);
-            background-color: #E8F5E9; /* হালকা সবুজ ব্যাকগ্রাউন্ড */
+            background-color: #E8F5E9;
             padding: 8px;
             border-radius: 5px;
             margin-bottom: 10px;
         }
 
-        .ingredient-category ul {
-            list-style: none;
-            padding: 0;
-        }
-
+        .ingredient-category ul { list-style: none; padding: 0; }
         .ingredient-category li {
             padding: 5px 0;
             font-size: 0.95rem;
@@ -362,7 +337,6 @@
             padding-left: 15px;
             position: relative;
         }
-        
         .ingredient-category li::before {
             content: '⭐';
             position: absolute;
@@ -376,9 +350,7 @@
             background-color: var(--secondary-color);
         }
 
-        .order-form-section .section-title {
-            color: var(--white);
-        }
+        .order-form-section .section-title { color: var(--white); }
 
         #main-order-form {
             background-color: var(--white);
@@ -387,32 +359,15 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+        .form-group input, .form-group textarea, .form-group select {
             width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-family: 'Noto Serif Bengali', serif;
             font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            border-color: var(--primary-color);
-            outline: none;
         }
 
         .submit-button {
@@ -433,24 +388,15 @@
             transform: translateY(-2px);
         }
 
-        .delivery-info {
-            text-align: center;
-            margin-top: 15px;
-            font-style: italic;
-            color: #444;
-            font-weight: 600;
-        }
-        
-        /* --- ৬. পপ-আপ নোটিফিকেশন (WhatsApp এবং Order Button) --- */
+        /* --- ৬. পপ-আপ নোটিফিকেশন --- */
         .popup-notification {
             position: fixed;
             bottom: 20px;
             right: 20px;
             z-index: 1001;
-            /* Flex layout for multiple buttons */
             display: flex; 
             flex-direction: column;
-            gap: 10px; /* Space between buttons */
+            gap: 10px;
         }
 
         .popup-button {
@@ -458,285 +404,116 @@
             align-items: center;
             justify-content: center;
             gap: 10px; 
-            
             color: var(--white);
             padding: 12px 20px;
             border-radius: 50px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             font-weight: 700;
             font-size: 1.1rem;
-            transition: transform 0.3s, background-color 0.3s;
-            line-height: 1; 
-            /* ⭐ পরিবর্তন: ব্যাজ পজিশনিং এর জন্য রিলেটিভ পজিশন ⭐ */
             position: relative; 
         }
         
-        /* ⭐ নতুন: WhatsApp নোটিফিকেশন ব্যাজ স্টাইল ⭐ */
         .whatsapp-btn::after {
             content: '1';
             position: absolute;
-            top: -5px; /* Adjust vertical position */
-            right: -5px; /* Adjust horizontal position */
-            background-color: red; /* Red color for notification */
+            top: -5px; right: -5px;
+            background-color: red;
             color: var(--white);
-            font-family: Arial, sans-serif;
             font-size: 0.75rem;
-            font-weight: 700;
-            line-height: 1; 
             padding: 4px 6px; 
             border-radius: 50%; 
-            min-width: 18px; 
-            height: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 0 3px var(--whatsapp-green); /* Ring effect */
-            animation: badge-pulse 1s infinite ease-out; /* Pulsing animation */
+            animation: badge-pulse 1s infinite ease-out;
         }
         
-        /* ⭐ নতুন: ব্যাজ পালসিং অ্যানিমেশন Keyframes ⭐ */
         @keyframes badge-pulse {
             0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
-            50% { transform: scale(1.1); box-shadow: 0 0 0 5px rgba(255, 0, 0, 0); }
             100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
         }
-        /* ⭐ WhatsApp ব্যাজ স্টাইল শেষ ⭐ */
 
-        .whatsapp-btn {
-            background-color: var(--whatsapp-green); 
-        }
-        
+        .whatsapp-btn { background-color: var(--whatsapp-green); }
         .order-link-btn {
-            background-color: var(--primary-color); /* কমলা রং */
-            animation: floating 1.5s infinite ease-in-out; /* শুধু অর্ডার বাটনে অ্যানিমেশন */
+            background-color: var(--primary-color);
+            animation: floating 1.5s infinite ease-in-out;
         }
 
-        .popup-button i {
-            font-size: 1.3em; 
-        }
-        
-        .popup-button:hover {
-            opacity: 0.9;
-            transform: scale(1.05); 
-        }
-        
-        /* অ্যানিমেশন */
         @keyframes floating {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
-            100% { transform: translateY(0); }
         }
 
-        /* --- ৭. কনফার্মেশন পপ-আপ (PROFESSIONAL DESIGN) --- */
+        /* --- ৭. কনফার্মেশন পপ-আপ --- */
         .confirmation-popup-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7); /* Darker backdrop */
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
             display: none;
             justify-content: center;
             align-items: center;
             z-index: 2000;
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
         }
 
-        .confirmation-popup-overlay.show {
-            display: flex;
-            opacity: 1;
-        }
+        .confirmation-popup-overlay.show { display: flex; }
 
         .confirmation-popup-content {
             background: var(--white);
-            padding: 40px 30px; /* Increased padding */
-            border-radius: 12px; /* Smoother corners */
+            padding: 40px 30px;
+            border-radius: 12px;
             text-align: center;
             width: 90%;
-            max-width: 450px; /* Slightly wider */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+            max-width: 450px;
             position: relative;
-            /* Springy bounce animation setting */
-            transform: scale(0.7) translateY(-50px); 
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            border-top: 5px solid var(--secondary-color); /* Premium border */
-        }
-
-        .confirmation-popup-overlay.show .confirmation-popup-content {
-            transform: scale(1) translateY(0);
+            border-top: 5px solid var(--secondary-color);
         }
 
         .close-btn {
             position: absolute;
-            top: 10px;
-            right: 15px;
+            top: 10px; right: 15px;
             font-size: 28px;
             cursor: pointer;
-            color: #999;
-            transition: color 0.3s;
-        }
-
-        .close-btn:hover {
-            color: var(--primary-color);
         }
         
-        .success-icon { /* NEW ICON STYLE */
+        .success-icon {
             font-size: 60px;
-            color: var(--secondary-color); /* Premium Green for success */
+            color: var(--secondary-color);
             margin-bottom: 15px;
-            animation: pulse 1.5s infinite;
-        }
-        
-        .confirmation-popup-content h3 { /* NEW TITLE STYLE */
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .confirmation-popup-content p { /* NEW PARAGRAPH STYLE */
-            margin-bottom: 25px;
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.5;
-        }
-        
-        .continue-shopping-btn { /* NEW BUTTON STYLE */
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 10px 25px;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        
-        .continue-shopping-btn:hover {
-            background-color: #E64A19;
-        }
-        
-        /* Keyframe for pulse animation */
-        @keyframes pulse {
-          0% { transform: scale(0.95); opacity: 0.7; }
-          70% { transform: scale(1); opacity: 1; }
-          100% { transform: scale(0.95); opacity: 0.7; }
         }
 
-        /* --- নতুন: লোডিং স্পিনার স্টাইল (মোবাইল অপটিমাইজড) --- */
+        /* --- ৮. লোডিং স্পিনার --- */
         .loading-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.9); /* হালকা সাদা ব্যাকগ্রাউন্ড */
-            display: none; /* শুরুতে লুকানো থাকবে */
-            
-            /* ⭐ মূল পরিবর্তন: Center Alignment নিশ্চিত করা ⭐ */
-            justify-content: center; /* হরাইজন্টাল সেন্টার */
-            align-items: center; /* ভার্টিক্যাল সেন্টার */
-            
-            z-index: 2500; /* নিশ্চিত করতে হবে যে এটি সবকিছুর উপরে থাকে */
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2500;
             flex-direction: column;
-            gap: 15px;
-            opacity: 0;
-            transition: opacity 0.3s;
         }
 
-        .loading-overlay.show {
-            display: flex;
-            opacity: 1;
-        }
+        .loading-overlay.show { display: flex; }
 
         .spinner {
-            border: 8px solid #f3f3f3; /* হালকা গ্রে */
-            border-top: 8px solid var(--primary-color); /* স্পিনারের রং */
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid var(--primary-color);
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 60px; height: 60px;
             animation: spin 1s linear infinite;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .loading-text {
-            font-size: 1.2rem;
-            color: var(--secondary-color);
-            font-weight: 700;
-            text-align: center; /* মোবাইলের জন্য টেক্সট সেন্টার করা হলো */
-            padding: 0 20px; /* ছোট স্ক্রিনে যাতে কোনায় না লেগে যায় */
-        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
 
-        /* --- ৮. ফুটার --- */
         footer {
             background-color: #263238;
             color: #B0BEC5;
             padding: 20px 0;
-            font-size: 0.9rem;
             text-align: center;
         }
 
-        .footer-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            text-align: center;
-        }
-
-        .footer-contact h4 {
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        .footer-contact a {
-            color: var(--white);
-            font-weight: 600;
-            display: block; /* Ensures links take full width for better click area */
-            margin: 5px 0;
-        }
-        
-        .footer-social-links {
-            margin-top: 10px;
-        }
-        
-        .footer-social-links a {
-            font-size: 1.5rem;
-            margin: 0 10px;
-            color: var(--white);
-            transition: color 0.3s;
-        }
-        
-        .footer-social-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        /* --- ৯. মিডিয়া কোয়েরি (ডেস্কটপ) --- */
         @media (min-width: 768px) {
-            .hero-grid {
-                flex-direction: row;
-                text-align: left;
-                gap: 50px;
-            }
-
-            .hero-text { order: 1; flex: 1; }
-            .hero-image { order: 2; flex: 1; text-align: right; }
-            .hero-image img { max-width: 450px; margin-top: 0; }
-            
-            .price-grid { gap: 50px; }
-            .price-box { width: 200px; height: 200px; }
+            .hero-grid { flex-direction: row; text-align: left; gap: 50px; }
+            .hero-image img { max-width: 450px; }
             .ingredients-columns { grid-template-columns: 1fr 1fr 1fr; }
-            
-            .footer-grid {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
         }
-        /* --- CSS স্টাইল শেষ --- */
     </style>
 </head>
 <body>
@@ -747,14 +524,14 @@
     </div>
 
     <div id="popup-order-now" class="popup-notification">
-        
         <a href="https://wa.me/8801307779982?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AE%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%AE%20%E0%A6%9C%E0%A6%BE%E0%A6%AB%E0%A6%B0%E0%A6%BE%E0%A6%A8%E0%A6%BF%20%E0%A6%B8%E0%A7%87%E0%A6%B0%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%95%20%E0%A6%B8%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A7%87%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%86%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%B9%E0%A7%80%E0%A5%A4" 
            target="_blank" 
-           class="popup-button whatsapp-btn">
+           class="popup-button whatsapp-btn"
+           onclick="fbq('trackCustom', 'WhatsAppContact');">
              <i class="fab fa-whatsapp"></i> WhatsApp-এ কথা বলুন
         </a>
         
-        <a href="#order-form" class="popup-button order-link-btn">
+        <a href="#order-form" class="popup-button order-link-btn" onclick="fbq('track', 'InitiateCheckout');">
             🛍️ এখনই অর্ডার করুন!
         </a>
     </div>
@@ -765,7 +542,6 @@
             <i class="fas fa-check-circle success-icon"></i> <h3>🎉 আপনার অর্ডার সফলভাবে গ্রহণ করা হয়েছে!</h3>
             <p>আমাদের প্রতিনিধি দ্রুত আপনার সাথে **০১৩ ০৭৭৭ ৯৯৮২** এই নম্বর থেকে যোগাযোগ করবে। আপনাকে ধন্যবাদ!</p>
             <a href="#hero" class="continue-shopping-btn">হোম সেকশনে ফিরে যান</a> 
-            
         </div>
     </div>
 
@@ -789,69 +565,46 @@
                 <div class="hero-text">
                     <h2>প্রিমিয়াম জাফরানি হোমমেইড সেরেলাক</h2>
                     <p class="tagline">**শিশুর পরিপূর্ণ পুষ্টি ও বৃদ্ধির জন্য ২২টি উপাদানে তৈরি**! সম্পূর্ণ রাসায়নিকমুক্ত ও নিরাপদ।</p>
-                    <a href="#order-form" class="cta-button">🛒 বিশেষ অফারটি নিন!</a>
+                    <a href="#order-form" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">🛒 বিশেষ অফারটি নিন!</a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://iranibazarbd.com/wp-content/uploads/2024/11/07fd016a-12a7-4a98-bf8f-b1d627fed8d8-scaled-e1732666066604.jpg" alt="প্রিমিয়াম জাফরানি হোমমেইড সেরেলাক প্রোডাক্ট ইমেজ"> 
+                    <img src="https://iranibazarbd.com/wp-content/uploads/2024/11/07fd016a-12a7-4a98-bf8f-b1d627fed8d8-scaled-e1732666066604.jpg" alt="জাফরানি সেরেলাক"> 
                 </div>
             </div>
         </section>
 
         <section id="price-offer" class="price-section">
             <div class="container price-grid">
-
                 <div class="price-box regular-price-box">
-                    <p class="label">নিয়মিত মূল্য</p> 
-                    <span class="price-cross">৳ ১৪০০</span>
-                    <p class="unit">/কেজি</p>
+                    <p class="label">নিয়মিত মূল্য</p> <span class="price-cross">৳ ১৪০০</span>
                 </div>
-
                 <div class="price-box offer-price-box animated-offer">
-                    <p class="label">বিশেষ অফার মূল্য</p> 
-                    <span class="price-main">৳ ১২০০</span>
-                    <p class="unit">/কেজি</p>
+                    <p class="label">বিশেষ অফার মূল্য</p> <span class="price-main">৳ ১২০০</span>
                 </div>
-
             </div>
         </section>
 
         <section id="product-details" class="details-section">
             <div class="container">
                 <h3 class="section-title">পণ্য পরিচিতি: গুণগত মান ও উপাদানসমূহ</h3>
-                
                 <div class="detail-card">
                     <h4>দ্রুত শক্তি সরবরাহ ও নিরাপদ খাদ্য মান</h4>
-                    <p>সেরেলাকটি খাঁটি হোমমেইড এবং সম্পূর্ণ রাসায়নিকমুক্ত। এটি শিশুর দ্রুত শক্তি সরবরাহ নিশ্চিত করে এবং সর্বোচ্চ পুষ্টিমান বজায় রাখে।</p>
-                    <p>👶 **বয়স উপযোগীতা:** ৬ মাস থেকে ১০ বছর পর্যন্ত সকল শিশুর জন্য উপযুক্ত।</p>
+                    <p>সেরেলাকটি খাঁটি হোমমেইড এবং সম্পূর্ণ রাসায়নিকমুক্ত।👶 ৬ মাস থেকে ১০ বছর পর্যন্ত শিশুর জন্য উপযুক্ত।</p>
                 </div>
-
                 <div class="ingredients-list">
                     <h4 class="sub-title">২২টি প্রধান উপাদানসমূহ</h4>
                     <div class="ingredients-columns">
-                        
                         <div class="ingredient-category">
                             <h5>শস্য ও ডাল:</h5>
-                            <ul>
-                                <li>সিদ্ধ চাল, পোলাও চাল, লাল চাল</li>
-                                <li>গম, ভুট্টা, মুগ ডাল, মসুর ডাল</li>
-                                <li>মাসকলাই, ছোলা ডাল, সাবুদানা</li>
-                            </ul>
+                            <ul><li>সিদ্ধ চাল, পোলাও চাল, লাল চাল</li><li>গম, ভুট্টা, মুগ ডাল, মসুর ডাল</li></ul>
                         </div>
-                        
                         <div class="ingredient-category">
                             <h5>বাদাম ও বীজ:</h5>
-                            <ul>
-                                <li>কাঠ বাদাম, কাজু বাদাম, পেস্তা বাদাম</li>
-                                <li>আখরোট, চীনাবাদাম, তালবিনা</li>
-                            </ul>
+                            <ul><li>কাঠ বাদাম, কাজু বাদাম, পেস্তা বাদাম</li><li>আখরোট, চীনাবাদাম</li></ul>
                         </div>
-                        
                         <div class="ingredient-category">
-                            <h5>ফ্লেভার ও স্বাস্থ্য:</h5>
-                            <ul>
-                                <li>খাঁটি জাফরান (প্রিমিয়াম)</li>
-                                <li>খেজুর, এলাচ, তালমিছরি, দারচিনি</li>
-                            </ul>
+                            <h5>ফ্লেভার:</h5>
+                            <ul><li>খাঁটি জাফরান, খেজুর, এলাচ</li></ul>
                         </div>
                     </div>
                 </div>
@@ -861,146 +614,59 @@
         <section id="order-form" class="order-form-section">
             <div class="container">
                 <h3 class="section-title">অর্ডার কনফার্মেশন ফর্ম</h3>
-                
-                <form id="main-order-form" 
-                      action="https://docs.google.com/forms/d/e/1FAIpQLSdCxFEmvTeewEAXOgq-LX2Q8Eyip1k-ClwHB4NhZVN5lmhOqg/formResponse"
-                      method="POST" 
-                      target="hidden_iframe"> 
-                    
-                    <div class="form-group">
-                        <label for="name">আপনার নাম *</label>
-                        <input type="text" id="name" name="entry.430850045" required placeholder="সম্পূর্ণ নাম লিখুন">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">ফোন নম্বর * (অর্ডার নিশ্চিত করার জন্য)</label>
-                        <input type="tel" id="phone" name="entry.267116440" placeholder="01XXXXXXXXX" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="address">ডেলিভারি ঠিকানা *</label>
-                        <textarea id="address" name="entry.1896985939" required rows="3" placeholder="বাসা/হোল্ডিং নম্বর সহ বিস্তারিত ঠিকানা"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="quantity">পছন্দ মতো ওজন নির্বাচন করুন *</label>
-                        <select id="quantity" name="entry.659862492" required>
+                <form id="main-order-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdCxFEmvTeewEAXOgq-LX2Q8Eyip1k-ClwHB4NhZVN5lmhOqg/formResponse" method="POST" target="hidden_iframe"> 
+                    <div class="form-group"><label>আপনার নাম *</label><input type="text" name="entry.430850045" required></div>
+                    <div class="form-group"><label>ফোন নম্বর *</label><input type="tel" name="entry.267116440" required></div>
+                    <div class="form-group"><label>ঠিকানা *</label><textarea name="entry.1896985939" required rows="3"></textarea></div>
+                    <div class="form-group"><label>ওজন *</label>
+                        <select name="entry.659862492" required>
                             <option value="">ওজন নির্বাচন করুন</option>
                             <option value="৫০০ গ্রাম">৫০০ গ্রাম</option>
                             <option value="১ কেজি">১ কেজি</option>
-                            <option value="১ কেজি ৫০০ গ্রাম">১ কেজি ৫০০ গ্রাম</option>
-                            <option value="২ কেজি">২ কেজি</option>
-                            <option value="৪ কেজি (বেশি সাশ্রয়ী)">৪ কেজি (বেশি সাশ্রয়ী)</option>
                         </select>
                     </div>
-
                     <button type="submit" class="submit-button">অর্ডার কনফার্ম করুন</button>
-                    <p class="delivery-info">**আমরা দ্রুত ডেলিভারি নিশ্চিত করতে অঙ্গীকারবদ্ধ** ।   আমাদের প্রতিনিধি আপনার সাথে দ্রুত যোগাযোগ করবে। </p>
                 </form>
             </div>
         </section>
-        </main>
+    </main>
 
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted) { formSubmissionSuccess(); }"></iframe>
     
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-contact">
-                <h4>যোগাযোগের জন্য</h4>
-                <p>হট লাইন: <a href="tel:01307779982">**০১৩ ০৭৭৭ ৯৯৮২**</a></p>
-                 <div class="footer-social-links">
-                     <a href="https://wa.me/8801307779982?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AE%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%AE%20%E0%A6%9C%E0%A6%BE%E0%A6%AB%E0%A6%B0%E0%A6%BE%E0%A6%A8%E0%A6%BF%20%E0%A6%B8%E0%A7%87%E0%A6%B0%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%95%20%E0%A6%B8%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A7%87%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%86%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%B9%E0%A7%80%E0%A5%A4" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a> 
-                </div>
-            </div>
-            <div class="footer-links">
-                <p>&copy; 2025 স্বপ্নের হাট বাজার। সর্বস্বত্ব সংরক্ষিত।</p>
-            </div>
+        <div class="container">
+            <p>&copy; 2025 স্বপ্নের হাট বাজার। হট লাইন: ০১৩ ০৭৭৭ ৯৯৮২</p>
         </div>
     </footer>
 
     <script>
-        // *** সংশোধিত অংশ: 'submitted' ফ্ল্যাগটি গ্লোবাল করা হলো ***
         window.submitted = false; 
 
         document.addEventListener('DOMContentLoaded', function() {
             const orderForm = document.getElementById('main-order-form');
             const confirmationPopupOverlay = document.getElementById('confirmation-popup');
-            const closePopupBtn = document.querySelector('.confirmation-popup-content .close-btn');
-            const popupNotification = document.getElementById('popup-order-now');
-            const continueShoppingBtn = document.querySelector('.continue-shopping-btn');
-            
-            // নতুন স্পিনার এলিমেন্ট
+            const closePopupBtn = document.querySelector('.close-btn');
             const loadingSpinnerOverlay = document.getElementById('loading-spinner-overlay'); 
 
-            // ফাংশন: পপ-আপ লুকানোর জন্য
-            function hidePopup() {
-                confirmationPopupOverlay.classList.remove('show');
-                // নিশ্চিত করুন যে পপ-আপ বন্ধের সময় স্পিনার লুকানো আছে
-                loadingSpinnerOverlay.classList.remove('show'); 
-            }
-
-            // ফাংশন: ফর্ম সফলভাবে সাবমিট হলে পপ-আপ দেখাবে (iframe-এর onload ইভেন্ট থেকে কল হবে)
             window.formSubmissionSuccess = function() {
                 if (window.submitted) {
-                    
-                    // স্পিনার লুকিয়ে ফেলা
                     loadingSpinnerOverlay.classList.remove('show'); 
-                    
-                    // ফর্ম রিসেট
                     orderForm.reset(); 
-                    
-                    // কনফার্মেশন পপ-আপ প্রদর্শন
                     confirmationPopupOverlay.classList.add('show');
-                    window.submitted = false; // গ্লোবাল ফ্ল্যাগ রিসেট
+                    
+                    // ৪. লিড ট্র্যাকিং (অর্ডার সাকসেসফুল হলে)
+                    fbq('track', 'Lead', {content_name: 'Jafrani Cerelac Order'});
+                    
+                    window.submitted = false;
                 }
             }
 
-            // ১. অর্ডার ফর্ম সাবমিট হ্যান্ডলিং
-            orderForm.addEventListener('submit', function(e) {
-                
-                // গ্লোবাল ফ্ল্যাগ সেট করা হচ্ছে (iframe-এর জন্য)
+            orderForm.addEventListener('submit', function() {
                 window.submitted = true; 
-                
-                // ⭐ ফর্ম সাবমিট হলে স্পিনার দেখানো ⭐
                 loadingSpinnerOverlay.classList.add('show'); 
-
-                console.log('Order submitting to Google Form...'); 
-                // মনে রাখবেন, এখানে e.preventDefault() বাদ দেওয়া হয়েছে যাতে ফর্মটি Google Forms এ জমা হয়।
             });
 
-            // ২. পপ-আপ বন্ধ করার ইভেন্ট
-            
-            closePopupBtn.addEventListener('click', hidePopup);
-
-            // 'হোম সেকশনে ফিরে যান' বাটনে ক্লিক করলে পপ-আপ বন্ধ হবে
-            continueShoppingBtn.addEventListener('click', function(e) {
-                 hidePopup(); // পপ-আপ লুকানোর ফাংশন কল করা হলো
-                 // এটি একটি অ্যাঙ্কর ট্যাগ হওয়ায় `#hero` তে স্ক্রলও করবে।
-            });
-
-            // পপ-আপের বাইরে ক্লিক করলে বন্ধ হবে
-            confirmationPopupOverlay.addEventListener('click', function(e) {
-                if (e.target === confirmationPopupOverlay) {
-                    hidePopup();
-                }
-            });
-
-            // ৩. স্ক্রোল করার সাথে সাথে পপ-আপ বাটনে দৃশ্যমানতা
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 400) {
-                    popupNotification.style.opacity = 1;
-                    popupNotification.style.transform = 'scale(1)';
-                } else {
-                    popupNotification.style.opacity = 0;
-                    popupNotification.style.transform = 'scale(0.9)';
-                }
-            });
-            
-            // ইনিশিয়াল স্টাইল সেট করা
-            popupNotification.style.opacity = 0;
-            popupNotification.style.transform = 'scale(0.9)';
-            popupNotification.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
+            closePopupBtn.addEventListener('click', () => confirmationPopupOverlay.classList.remove('show'));
         });
     </script>
 </body>
